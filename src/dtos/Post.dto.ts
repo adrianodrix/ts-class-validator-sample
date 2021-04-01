@@ -40,8 +40,8 @@ export class Post {
   @ArrayNotEmpty()
   @ArrayMinSize(2)
   @ArrayMaxSize(5)
-  @MinLength(3, { each: true, message: 'Tag is too short. Minimal length is $value characters' })
-  @MaxLength(50, { each: true, message: 'Tag is too long. Maximal length is $value characters' })
+  @MinLength(3)
+  @MaxLength(50)
   tags!: string[]
 
   @IsEnum(PostType)
